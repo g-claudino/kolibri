@@ -1,13 +1,21 @@
+@lighter-shades: #fafafc; // baby powder
+@light-shades: #dae0f2; // lavender (web)
+@light-accent: #6096ba; // cerulean frost
+@main-brand: #7c238c; // dark magenta
+@fst-dark-accent: #274c77; // yale blue
+@snd-dark-accent: #c41e3d; // cardinal
+@dark-shades: #30292f; // raisin black
+
 body {
   font-family: sans-serif;
-  background: #eee;
+  background: @light-shades;
   padding: 0;
   margin: 0;
-  color: #333;
+  color: @dark-shades;
 }
 
 a {
-  color: #26a;
+  color: @main-brand;
   text-decoration: none;
   font-weight: 500;
 }
@@ -18,9 +26,13 @@ a:hover {
 
 header {
   padding: 2em;
-  border-bottom: 1px solid #ccc;
-  background: #fff;
+  border-bottom: 1px solid @light-shades;
+  background: @main-brand;
   text-align: center;
+}
+
+header a {
+  color: @lighter-shades;
 }
 
 nav.menu a {
@@ -64,15 +76,15 @@ p {
 }
 
 code {
-  color: #d03;
-  background-color: #f9f9f9;
+  color: @main-brand;
+  background-color: @lighter-shades;
   padding: 0.1em 0.4em;
-  border: 1px solid #e5e5e5;
+  border: 1px solid @lighter-shades;
   border-radius: 0.15em;
   display: inline-block;
 }
 
 pre code {
   display: block;
-  color: #396;
+  color: @fst-dark-accent;
 }
