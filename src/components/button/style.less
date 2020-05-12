@@ -1,0 +1,204 @@
+@lighter-shades: #fafafc; // baby powder
+@light-shades: #dae0f2; // lavender (web)
+@light-accent: #6096ba; // cerulean frost
+@main-brand: #7c238c; // dark magenta
+@fst-dark-accent: #274c77; // yale blue
+@snd-dark-accent: #c41e3d; // cardinal
+@dark-shades: #30292f; // raisin black
+@small-percentage: 5%;
+@medium-percentage: 10%;
+@great-percentage: 20%;
+@short-transition-duration: 86ms;
+
+button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: @lighter-shades;
+  border-color: @light-shades;
+  border-width: 1px;
+  color: @dark-shades;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+
+  &:focus {
+    outline: none;
+    border-color: @main-brand;
+    color: @dark-shades;
+
+    &:not(:active) {
+      box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+    }
+  }
+
+  &:active {
+    outline: none;
+    border-color: lighten(@dark-shades, @small-percentage);
+    color: @dark-shades;
+  }
+
+  strong {
+    color: inherit;
+  }
+
+  .icon {
+    height: 1.5em;
+    width: 1.5em;
+
+    &:first-child {
+      &:not(:last-child) {
+        margin-left: calc(-0.5em - 1px);
+        margin-right: 0.25em;
+      }
+
+      &:last-child {
+        margin-left: calc(-0.5em - 1px);
+        margin-right: calc(-0.5em - 1px);
+      }
+    }
+
+    &:last-child {
+      &:not(:first-child) {
+        margin-left: 0.25em;
+        margin-right: calc(-0.5em - 1px);
+      }
+    }
+  }
+
+  .icon.is-small {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .icon.is-medium {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .icon.is-large {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  &:hover {
+    border-color: darken(@lighter-shades, @medium-percentage);
+    color: @dark-shades;
+  }
+}
+
+button.is-primary a {
+  color: @lighter-shades;
+
+  &:hover {
+    color: @lighter-shades;
+  }
+
+  &:focus {
+    color: @lighter-shades;
+  }
+
+  &:active {
+    color: @lighter-shades;
+  }
+}
+
+button.is-primary {
+  background-color: @main-brand;
+  border-color: transparent;
+  color: @lighter-shades;
+  transition-duration: @short-transition-duration;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    background-color: @snd-dark-accent;
+    border-color: transparent;
+    color: @lighter-shades;
+  }
+
+  &:focus {
+    border-color: transparent;
+    color: @lighter-shades;
+
+    &:not(:active) {
+      box-shadow: 0 0 0 0.125em rgba(@snd-dark-accent 0.25);
+    }
+  }
+
+  &:active {
+    background-color: darken(@snd-dark-accent, @small-percentage);
+    border-color: transparent;
+    color: @lighter-shades;
+  }
+}
+
+button.is-light a {
+  color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+
+  &:hover {
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  }
+
+  &:focus {
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  }
+
+  &:active {
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  }
+}
+
+button.is-light {
+  background-color: lighten(@light-shades, @small-percentage);
+  border-color: transparent;
+  color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  transition-duration: @short-transition-duration;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    background-color: @light-shades;
+    border-color: transparent;
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  }
+
+  &:focus {
+    border-color: transparent;
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+
+    &:not(:active) {
+      box-shadow: 0 0 0 0.125em rgba(@lighter-shades, 0.25);
+    }
+  }
+
+  &:active {
+    background-color: darken(@light-shades, @small-percentage);
+    border-color: transparent;
+    color: rgba(darken(@dark-shades, @small-percentage), 0.7);
+  }
+}
