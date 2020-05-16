@@ -1,7 +1,7 @@
 # Marko Starter Demo
 This repo demos the basic features of [`marko-starter`](https://github.com/marko-js/marko-starter).
 
-## Install
+## Instalar
 
 ```bash
 npm install
