@@ -1,5 +1,22 @@
 @import '../common/variables.less';
 
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: @lighter-shades;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: sans-serif;
   background: @light-shades;
@@ -9,12 +26,18 @@ body {
 }
 
 a {
+  &.is-light {
+    color: @light-shades;
+  }
   color: @main-brand;
   text-decoration: none;
   font-weight: 500;
 }
 
 a:hover {
+  &.is-light {
+    color: @lighter-shades;
+  }
   text-decoration: underline;
 }
 
@@ -84,5 +107,5 @@ pre code {
 }
 
 .before-foot {
-  min-height: calc(100vh - 45px);
+  min-height: calc(100vh - (@footer-height + @footer-vertical-padding));
 }
