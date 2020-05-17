@@ -1,12 +1,41 @@
 footer
   a class="is-light" href="#top" -- Voltar para o topo
   div class="links"
-    a class="is-light" href="/" -- Para empresas
-    a class="is-light" href="/" -- Para clientes
-    a class="is-light footer-image" href="/"
-      img src="../site-layout/white-logo.png"
-    a class="is-light" href="/" -- Sobre nós
-    a class="is-light" href="mailto:kolibri@gmail.com" -- Fale conosco
+    $ {
+      const clazz = "is-light",
+          links = [
+            {
+              clazz,
+              route: "/",
+              text: "Para empresas"
+            },
+            {
+              clazz,
+              route: "/",
+              text: "Para você"
+            },
+            {
+              clazz: clazz + " footer-logo",
+              route: "/",
+              text: "",
+              logo: true
+            },
+            {
+              clazz,
+              route: "/about",
+              text: "Sobre nós"
+            },
+            {
+              clazz,
+              route: "mailto:kolibri@gmail.com",
+              text: "Fale conosco"
+            }
+          ];
+    }
+    for|link| of=links
+      a class=link.clazz href=link.route -- ${link.text}
+        if(link.logo)
+          img alt="logo" src="../site-layout/white-logo.png"
   --
   &copy; 2020 Kolibri. Todos os direitos reservados.
   --
