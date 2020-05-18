@@ -1,0 +1,470 @@
+@import '../common/variables.less';
+
+.field {
+    &:not(:last-child) {
+        margin-bottom: 0.75rem;
+    }
+}
+
+.field.has-addons {
+    display: flex;
+    justify-content: flex-start;
+
+    .control {
+        &:not(:last-child) {
+            margin-right: -1px;
+        }
+
+        &:not(:first-child) {
+            &:not(:last-child) {
+                .button {
+                    border-radius: 0;
+                }
+
+                .input {
+                    border-radius: 0;
+                }
+
+                .select {
+                    select {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            &:not(:only-child) {
+                .button {
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                }
+
+                .input {
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                }
+
+                .select {
+                    select {
+                        border-bottom-right-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            &:not(:only-child) {
+                .button {
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+
+                .input {
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+
+                .select {
+                    select {
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .button {
+            &:not([disabled]) {
+                &:hover {
+                    z-index: 2;
+                }
+
+                &:focus {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+
+                &:active {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+            }
+
+            &:not([disabled]).is-hovered {
+                z-index: 2;
+            }
+
+            &:not([disabled]).is-focused {
+                z-index: 3;
+
+                &:hover {
+                    z-index: 4;
+                }
+            }
+
+            &:not([disabled]).is-active {
+                z-index: 3;
+
+                &:hover {
+                    z-index: 4;
+                }
+            }
+        }
+
+        .input {
+            &:not([disabled]) {
+                &:hover {
+                    z-index: 2;
+                }
+
+                &:focus {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+
+                &:active {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+            }
+
+            &:not([disabled]).is-hovered {
+                z-index: 2;
+            }
+
+            &:not([disabled]).is-focused {
+                z-index: 3;
+
+                &:hover {
+                    z-index: 4;
+                }
+            }
+
+            &:not([disabled]).is-active {
+                z-index: 3;
+
+                &:hover {
+                    z-index: 4;
+                }
+            }
+        }
+
+        .select {
+            select {
+                &:not([disabled]) {
+                    &:hover {
+                        z-index: 2;
+                    }
+
+                    &:focus {
+                        z-index: 3;
+
+                        &:hover {
+                            z-index: 4;
+                        }
+                    }
+
+                    &:active {
+                        z-index: 3;
+
+                        &:hover {
+                            z-index: 4;
+                        }
+                    }
+                }
+
+                &:not([disabled]).is-hovered {
+                    z-index: 2;
+                }
+
+                &:not([disabled]).is-focused {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+
+                &:not([disabled]).is-active {
+                    z-index: 3;
+
+                    &:hover {
+                        z-index: 4;
+                    }
+                }
+            }
+        }
+    }
+
+    .control.is-expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+
+.field.has-addons.has-addons-centered {
+    justify-content: center;
+}
+
+.field.has-addons.has-addons-right {
+    justify-content: flex-end;
+}
+
+.field.has-addons.has-addons-fullwidth {
+    .control {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+}
+
+.field.is-grouped {
+    display: flex;
+    justify-content: flex-start;
+
+    >.control {
+        flex-shrink: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 0.75rem;
+        }
+    }
+
+    >.control.is-expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+
+.field.is-grouped.is-grouped-centered {
+    justify-content: center;
+}
+
+.field.is-grouped.is-grouped-right {
+    justify-content: flex-end;
+}
+
+.field.is-grouped.is-grouped-multiline {
+    flex-wrap: wrap;
+
+    >.control {
+        &:last-child {
+            margin-bottom: 0.75rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: -0.75rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+.field-label {
+    .label {
+        font-size: inherit;
+    }
+}
+
+.field-body {
+    .field {
+        .field {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+}
+
+.control.has-icons-left {
+    .input {
+        &:focus {
+            &~.icon {
+                color: #4a4a4a;
+            }
+        }
+
+        padding-left: 2.5em;
+    }
+
+    .select {
+        &:focus {
+            &~.icon {
+                color: #4a4a4a;
+            }
+        }
+
+        select {
+            padding-left: 2.5em;
+        }
+    }
+
+    .input.is-small {
+        &~.icon {
+            font-size: 0.75rem;
+        }
+    }
+
+    .select.is-small {
+        &~.icon {
+            font-size: 0.75rem;
+        }
+    }
+
+    .input.is-medium {
+        &~.icon {
+            font-size: 1.25rem;
+        }
+    }
+
+    .select.is-medium {
+        &~.icon {
+            font-size: 1.25rem;
+        }
+    }
+
+    .input.is-large {
+        &~.icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .select.is-large {
+        &~.icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .icon {
+        color: #dbdbdb;
+        height: 2.5em;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 2.5em;
+        z-index: 4;
+    }
+
+    .icon.is-left {
+        left: 0;
+    }
+}
+
+.control.has-icons-right {
+    .input {
+        &:focus {
+            &~.icon {
+                color: #4a4a4a;
+            }
+        }
+
+        padding-right: 2.5em;
+    }
+
+    .select {
+        &:focus {
+            &~.icon {
+                color: #4a4a4a;
+            }
+        }
+
+        select {
+            padding-right: 2.5em;
+        }
+    }
+
+    .input.is-small {
+        &~.icon {
+            font-size: 0.75rem;
+        }
+    }
+
+    .select.is-small {
+        &~.icon {
+            font-size: 0.75rem;
+        }
+    }
+
+    .input.is-medium {
+        &~.icon {
+            font-size: 1.25rem;
+        }
+    }
+
+    .select.is-medium {
+        &~.icon {
+            font-size: 1.25rem;
+        }
+    }
+
+    .input.is-large {
+        &~.icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .select.is-large {
+        &~.icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .icon {
+        color: #dbdbdb;
+        height: 2.5em;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 2.5em;
+        z-index: 4;
+    }
+
+    .icon.is-right {
+        right: 0;
+    }
+}
+
+.control.is-loading.is-small {
+    &:after {
+        font-size: 0.75rem;
+    }
+}
+
+.control.is-loading.is-medium {
+    &:after {
+        font-size: 1.25rem;
+    }
+}
+
+.control.is-loading.is-large {
+    &:after {
+        font-size: 1.5rem;
+    }
+}
+
