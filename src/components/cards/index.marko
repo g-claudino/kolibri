@@ -1,10 +1,10 @@
-section class=Object.keys(input.classes || []).concat("card").join(" ")
-  div class="card"
-    div class="header"
-      <${input.contentCardHeader}/>
-    div class="image"
-      <${input.contentCardImage}/>
-    div class="content"
-      <${input.contentCardContent}/>
-    div class="footer"
-      <${input.contentCardFooter}/>
+div class="card"
+  div class="card-header"
+    <${input.contentCardHeader}/>
+  div class="card-image"
+    figure class=Object.keys(input.imageClasses || []).concat("image").join(" ")	
+    <$image{input.contentCardImage}/>
+  div class="card-content"
+    <${input.contentCardContent}/>
+  div class="card-footer"
+    <${input.contentCardFooter}/>
