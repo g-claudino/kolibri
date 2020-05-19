@@ -2,22 +2,28 @@ site-layout
   @title -- Sobre nós
   @hero
     hero
+      @classes is-medium is-primary is-bold
       @title -- Sobre nós
-      @subtitle -- Conheça mais sobre a Kolibri
+      @subtitle -- Conheça mais sobre a Kolibri e quem torna esse projeto possível!
   @content
     section
-      h2 -- Layouts
-      p
-        ---
-        If you hadn't noticed, this site has the same header on every page.  This is provided by the
-        <code>&lt;site-layout></code>
-        component which lives in
-        <code>~/src/components/site-layout</code>.  This component makes use of Marko's ability to
-        <a href="http://markojs.com/docs/core-tags/#layouts-with-nested-attributes">
-          pass content using nested attributes
-        </a>.
-        ---
-      p
+      h2 -- Origem
+      level
+        @content
+          div class="level-left left-has-max-width"
+            p
+              ---
+              Somos um grupo de cinco estudantes da USP de São Carlos-SP (quatro engenheiros aeronáuticos e um cientista da computação) 
+              obstinados a encontrar soluções criativas para vencermos juntos essa pandemia. Combinando nossa expertise no setor aeronáutico
+              com habilidades de desenvolvimento digital da equipe, eis que, durante o HackaTrouble 2020, surge a Kolibri, o jeito mais prático
+              de conectar produtores, operadores aéreos e compradores, seja em tempos de crise, seja em situações normais. <br/>
+              O nome Kolibri surge da nossa crença de que assim como, essa ave tão brasileira, bate suas asas várias vezes por minuto, as aeronaves
+              devem decolar o tempo todo no Brasil para permitir nosso progresso. 
+              ---
+            p
+          div class="level-right"
+            <img src="../../components/site-layout/kolibri-foto.jpg" alt="Kolibri Voando" width="600px"/>
+
     section
       h2 -- Styles
       p
