@@ -2,52 +2,23 @@ site-layout
   @title -- Kolibri
   @content
     hero
-      @classes is-full-height is-primary is-bold
+      @classes is-halfheight is-primary is-bold has-text-centered
       @subtitle -- Revolucionar o trasporte aéreo é nosso lema.
       @contentBelow
-        level
-          @content
-            div class ="level-left left-has-max-width"
-              h1
-              --
-              Faça parte de um novo jeito de transportar cargas aéreas pelo Brasil. <br/>
-              É possível fazer compras, vendas ou se responsabilizar pelo frete aéreo dos mais diversos tipos de mercadorias através de nossa plataforma.
-              <br/> Seja você também parte dessa história e nos ajude a impulsionar o frete aéreo em todo o país. 
-              <br/> Kolibri, decolando juntos no combate ao Coronavírus!
-              --
-              h1
-            div class ="level-right"
-              <iframe width="672" height="378" src="https://www.youtube.com/embed/watch?v=vGZeksSh3o8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           
-    section
-      h2 -- Hello!
-      level
-        @content
-          div class="level-left"
-            card
-              @contentCardContent -- oi
-          div class="level-right"
-            card
-              @contentCardContent -- oi
-      p
-        ---
-        We're glad you've decided to try out Marko. You're looking at the result of
-        <code>~/src/index.marko</code>. Try editing that file and this page will reload. &#9889;
-        ---
-      h2 -- Components
-      pre
-        ---
-        Here's a counter component. You click, it counts! It lives in
-        <code>~/src/components/click-count/</code>.  Try making it count by 5.
-        ---
-      click-count
-      h3 -- Resolving Components
-      p
-        --  If you look at the code for this page, you'll notice we use the
-        code -- &lt;click-count/>
-        --  component, but don't import it from anywhere.  That's because when resolving custom tags, Marko
-        a href="http://markojs.com/docs/custom-tags/#discovering-tags"
-          --  looks up the directory tree
-        --  for a
-        code -- components/
-        --  directory and finds the counter for us!
+        div class="columns"
+          div class ="column"
+            div
+              p
+                --
+                Faça parte de um novo jeito de transportar cargas aéreas pelo Brasil. É possível fazer
+                compras, vendas ou se responsabilizar pelo frete aéreo dos mais diversos tipos de
+                mercadorias através de nossa plataforma.
+                --
+              p
+                --
+                Seja você também parte dessa história e nos ajude a impulsionar o frete aéreo todo o país.
+                --
+          div class ="column"
+            object  allowfullscreen
+              param name="movie" value="https://www.youtube-nocookie.com/embed/Sdg0ef2PpBw"
+              embed src="https://www.youtube-nocookie.com/embed/vGZeksSh3o8"  allowfullscreen
