@@ -462,6 +462,268 @@ p {
   }
 }
 
+.table {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  background-color: lighten(@lighter-shades, @small-percentage);
+  color: #363636;
+
+  td {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+  }
+
+  th {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    color: #363636;
+
+    &:not([align]) {
+      text-align: left;
+    }
+  }
+
+  td.is-white {
+    background-color: lighten(@lighter-shades, @small-percentage);
+    border-color: lighten(@lighter-shades, @small-percentage);
+    color: #0a0a0a;
+  }
+
+  th.is-white {
+    background-color: lighten(@lighter-shades, @small-percentage);
+    border-color: lighten(@lighter-shades, @small-percentage);
+    color: #0a0a0a;
+  }
+
+  td.is-black {
+    background-color: #0a0a0a;
+    border-color: #0a0a0a;
+    color: lighten(@lighter-shades, @small-percentage);
+  }
+
+  th.is-black {
+    background-color: #0a0a0a;
+    border-color: #0a0a0a;
+    color: lighten(@lighter-shades, @small-percentage);
+  }
+
+  td.is-light {
+    background-color: @lighter-shades;
+    border-color: @lighter-shades;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  th.is-light {
+    background-color: @lighter-shades;
+    border-color: @lighter-shades;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  td.is-dark {
+    background-color: #363636;
+    border-color: #363636;
+    color: #fff;
+  }
+
+  th.is-dark {
+    background-color: #363636;
+    border-color: #363636;
+    color: #fff;
+  }
+
+  td.is-primary {
+    background-color: @main-brand;
+    border-color: @main-brand;
+    color: #fff;
+  }
+
+  th.is-primary {
+    background-color: @main-brand;
+    border-color: @main-brand;
+    color: #fff;
+  }
+
+  td.is-link {
+    background-color: @fst-dark-accent;
+    border-color: @fst-dark-accent;
+    color: #fff;
+  }
+
+  th.is-link {
+    background-color: @fst-dark-accent;
+    border-color: @fst-dark-accent;
+    color: #fff;
+  }
+
+  td.is-info {
+    background-color: lighten(@fst-dark-accent, @medium-percentage);
+    border-color: lighten(@fst-dark-accent, @medium-percentage);
+    color: #fff;
+  }
+
+  th.is-info {
+    background-color: lighten(@fst-dark-accent, @medium-percentage);
+    border-color: lighten(@fst-dark-accent, @medium-percentage);
+    color: #fff;
+  }
+
+  td.is-success {
+    background-color: #48c774;
+    border-color: #48c774;
+    color: #fff;
+  }
+
+  th.is-success {
+    background-color: #48c774;
+    border-color: #48c774;
+    color: #fff;
+  }
+
+  td.is-warning {
+    background-color: #ffdd57;
+    border-color: #ffdd57;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  th.is-warning {
+    background-color: #ffdd57;
+    border-color: #ffdd57;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  td.is-danger {
+    background-color: #f14668;
+    border-color: #f14668;
+    color: #fff;
+  }
+
+  th.is-danger {
+    background-color: #f14668;
+    border-color: #f14668;
+    color: #fff;
+  }
+
+  td.is-narrow {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  th.is-narrow {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  td.is-selected {
+    background-color: @main-brand;
+    color: #fff;
+
+    a {
+      color: currentColor;
+    }
+
+    strong {
+      color: currentColor;
+    }
+  }
+
+  th.is-selected {
+    background-color: @main-brand;
+    color: #fff;
+
+    a {
+      color: currentColor;
+    }
+
+    strong {
+      color: currentColor;
+    }
+  }
+
+  tr.is-selected {
+    background-color: @main-brand;
+    color: #fff;
+
+    a {
+      color: currentColor;
+    }
+
+    strong {
+      color: currentColor;
+    }
+
+    td {
+      border-color: #fff;
+      color: currentColor;
+    }
+
+    th {
+      border-color: #fff;
+      color: currentColor;
+    }
+  }
+
+  thead {
+    background-color: transparent;
+
+    td {
+      border-width: 0 0 2px;
+      color: #363636;
+    }
+
+    th {
+      border-width: 0 0 2px;
+      color: #363636;
+    }
+  }
+
+  tfoot {
+    background-color: transparent;
+
+    td {
+      border-width: 2px 0 0;
+      color: #363636;
+    }
+
+    th {
+      border-width: 2px 0 0;
+      color: #363636;
+    }
+  }
+
+  tbody {
+    background-color: transparent;
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom-width: 0;
+        }
+
+        th {
+          border-bottom-width: 0;
+        }
+      }
+    }
+  }
+}
+
+.table-container {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
 code {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
