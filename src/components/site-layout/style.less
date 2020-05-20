@@ -28,6 +28,18 @@ body {
   line-height: 1.5;
 }
 
+* {
+  box-sizing: inherit;
+
+  &::before {
+    box-sizing: inherit;
+  }
+
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
 a {
   &.is-light {
     color: @light-shades;
@@ -549,6 +561,12 @@ legend {
       background-color: transparent;
     }
   }
+}
+
+iframe {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .table {
