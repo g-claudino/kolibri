@@ -439,7 +439,7 @@ pre {
   .input {
     &:focus {
       &~.icon {
-        color: #4a4a4a;
+        color: lighten(@dark-shades, @medium-percentage);
       }
     }
 
@@ -449,7 +449,7 @@ pre {
   .select {
     &:focus {
       &~.icon {
-        color: #4a4a4a;
+        color: lighten(@dark-shades, @medium-percentage);
       }
     }
 
@@ -495,7 +495,7 @@ pre {
   }
 
   .icon {
-    color: #dbdbdb;
+    color: @light-shades;
     height: 2.5em;
     pointer-events: none;
     position: absolute;
@@ -513,7 +513,7 @@ pre {
   .input {
     &:focus {
       &~.icon {
-        color: #4a4a4a;
+        color: lighten(@dark-shades, @medium-percentage);
       }
     }
 
@@ -523,7 +523,7 @@ pre {
   .select {
     &:focus {
       &~.icon {
-        color: #4a4a4a;
+        color: lighten(@dark-shades, @medium-percentage);
       }
     }
 
@@ -569,7 +569,7 @@ pre {
   }
 
   .icon {
-    color: #dbdbdb;
+    color: @light-shades;
     height: 2.5em;
     pointer-events: none;
     position: absolute;
@@ -612,7 +612,7 @@ pre {
   }
 
   &:hover {
-    color: #363636;
+    color: @dark-shades;
   }
 
   &+.radio {
@@ -623,7 +623,7 @@ pre {
 
 
 .is-link.input {
-  border-color: #3273dc;
+  border-color: lighten(@fst-dark-accent, @small-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
@@ -635,7 +635,7 @@ pre {
 }
 
 .is-link.textarea {
-  border-color: #3273dc;
+  border-color: lighten(@fst-dark-accent, @small-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
@@ -663,7 +663,7 @@ pre {
 }
 
 .is-info.input {
-  border-color: #3298dc;
+  border-color: lighten(@dark-shades, @medium-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(50, 152, 220, 0.25);
@@ -675,7 +675,7 @@ pre {
 }
 
 .is-info.textarea {
-  border-color: #3298dc;
+  border-color: lighten(@dark-shades, @medium-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(50, 152, 220, 0.25);
@@ -868,12 +868,6 @@ pre {
   width: auto;
 }
 
-// .input.is-rounded {
-//     border-radius: 290486px;
-//     padding-left: calc(calc(0.75em - 1px) + 0.375em);
-//     padding-right: calc(calc(0.75em - 1px) + 0.375em);
-// }
-
 .input.is-static {
   background-color: transparent;
   border-color: transparent;
@@ -901,7 +895,7 @@ pre {
   }
 
   &:hover {
-    color: #363636;
+    color: @dark-shades;
   }
 }
 
@@ -922,7 +916,7 @@ pre {
 }
 
 .is-white.input {
-  border-color: white;
+  border-color: lighten(@lighter-shades, @small-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
@@ -934,7 +928,7 @@ pre {
 }
 
 .is-white.textarea {
-  border-color: white;
+  border-color: lighten(@lighter-shades, @small-percentage);
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
@@ -1002,7 +996,7 @@ pre {
 }
 
 .is-light.input {
-  border-color: whitesmoke;
+  border-color: @lighter-shades;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
@@ -1014,7 +1008,7 @@ pre {
 }
 
 .is-light.textarea {
-  border-color: whitesmoke;
+  border-color: @lighter-shades;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
@@ -1042,7 +1036,7 @@ pre {
 }
 
 .is-dark.input {
-  border-color: #363636;
+  border-color: @dark-shades;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
@@ -1054,7 +1048,7 @@ pre {
 }
 
 .is-dark.textarea {
-  border-color: #363636;
+  border-color: @dark-shades;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
@@ -1082,7 +1076,7 @@ pre {
 }
 
 .is-primary.input {
-  border-color: #00d1b2;
+  border-color: @main-brand;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
@@ -1094,7 +1088,7 @@ pre {
 }
 
 .is-primary.textarea {
-  border-color: #00d1b2;
+  border-color: @main-brand;
 
   &:focus {
     box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
