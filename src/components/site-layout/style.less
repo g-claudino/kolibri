@@ -48,6 +48,11 @@ a {
   color: @main-brand;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
+
+  strong {
+    color: currentColor;
+  }
 }
 
 a:hover {
@@ -56,6 +61,392 @@ a:hover {
   }
 
   text-decoration: underline;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: #363636;
+  font-weight: 700;
+}
+
+.is-clearfix {
+  &::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+.is-pulled-left {
+  float: left !important;
+}
+
+.is-pulled-right {
+  float: right !important;
+}
+
+.is-clipped {
+  overflow: hidden !important;
+}
+
+.is-size-1 {
+  font-size: 3rem !important;
+}
+
+.is-size-2 {
+  font-size: 2.5rem !important;
+}
+
+.is-size-3 {
+  font-size: 2rem !important;
+}
+
+.is-size-4 {
+  font-size: 1.5rem !important;
+}
+
+.is-size-5 {
+  font-size: 1.25rem !important;
+}
+
+.is-size-6 {
+  font-size: 1rem !important;
+}
+
+.is-size-7 {
+  font-size: 0.75rem !important;
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+.has-text-justified {
+  text-align: justify !important;
+}
+
+.has-text-left {
+  text-align: left !important;
+}
+
+.has-text-right {
+  text-align: right !important;
+}
+
+.is-capitalized {
+  text-transform: capitalize !important;
+}
+
+.is-lowercase {
+  text-transform: lowercase !important;
+}
+
+.is-uppercase {
+  text-transform: uppercase !important;
+}
+
+.is-italic {
+  font-style: italic !important;
+}
+
+.has-text-white {
+  color: white !important;
+}
+
+a.has-text-white {
+  &:hover {
+    color: #e6e6e6 !important;
+  }
+
+  &:focus {
+    color: #e6e6e6 !important;
+  }
+}
+
+.has-background-white {
+  background-color: white !important;
+}
+
+.has-text-black {
+  color: #0a0a0a !important;
+}
+
+a.has-text-black {
+  &:hover {
+    color: black !important;
+  }
+
+  &:focus {
+    color: black !important;
+  }
+}
+
+.has-background-black {
+  background-color: #0a0a0a !important;
+}
+
+.has-text-light {
+  color: @lighter-shades !important;
+}
+
+a.has-text-light {
+  &:hover {
+    color: @light-shades !important;
+  }
+
+  &:focus {
+    color: @light-shades !important;
+  }
+}
+
+.has-background-light {
+  background-color: @lighter-shades !important;
+}
+
+.has-text-dark {
+  color: @dark-shades !important;
+}
+
+a.has-text-dark {
+  &:hover {
+    color: #1c1c1c !important;
+  }
+
+  &:focus {
+    color: #1c1c1c !important;
+  }
+}
+
+.has-background-dark {
+  background-color: @dark-shades !important;
+}
+
+.has-text-primary {
+  color: @main-brand !important;
+}
+
+a.has-text-primary {
+  &:hover {
+    color: darken(@main-brand, @medium-percentage) !important;
+  }
+
+  &:focus {
+    color: darken(@main-brand, @medium-percentage) !important;
+  }
+}
+
+.has-background-primary {
+  background-color: @main-brand !important;
+}
+
+.has-text-link {
+  color: @snd-dark-accent !important;
+}
+
+a.has-text-link {
+  &:hover {
+    color: darken(@snd-dark-accent, @medium-percentage) !important;
+  }
+
+  &:focus {
+    color: darken(@snd-dark-accent, @medium-percentage) !important;
+  }
+}
+
+.has-background-link {
+  background-color: @snd-dark-accent !important;
+}
+
+.has-text-info {
+  color: @fst-dark-accent !important;
+}
+
+a.has-text-info {
+  &:hover {
+    color: darken(@snd-dark-accent, @medium-percentage) !important;
+  }
+
+  &:focus {
+    color: darken(@snd-dark-accent, @medium-percentage) !important;
+  }
+}
+
+.has-background-info {
+  background-color: @fst-dark-accent !important;
+}
+
+.has-text-success {
+  color: #48c774 !important;
+}
+
+a.has-text-success {
+  &:hover {
+    color: #34a85c !important;
+  }
+
+  &:focus {
+    color: #34a85c !important;
+  }
+}
+
+.has-background-success {
+  background-color: #48c774 !important;
+}
+
+.has-text-warning {
+  color: #ffdd57 !important;
+}
+
+a.has-text-warning {
+  &:hover {
+    color: #ffd324 !important;
+  }
+
+  &:focus {
+    color: #ffd324 !important;
+  }
+}
+
+.has-background-warning {
+  background-color: #ffdd57 !important;
+}
+
+.has-text-danger {
+  color: #f14668 !important;
+}
+
+a.has-text-danger {
+  &:hover {
+    color: #ee1742 !important;
+  }
+
+  &:focus {
+    color: #ee1742 !important;
+  }
+}
+
+.has-background-danger {
+  background-color: #f14668 !important;
+}
+
+.has-text-black-bis {
+  color: #121212 !important;
+}
+
+.has-background-black-bis {
+  background-color: #121212 !important;
+}
+
+.has-text-black-ter {
+  color: #242424 !important;
+}
+
+.has-background-black-ter {
+  background-color: #242424 !important;
+}
+
+.has-text-grey-darker {
+  color: #363636 !important;
+}
+
+.has-background-grey-darker {
+  background-color: #363636 !important;
+}
+
+.has-text-grey-dark {
+  color: #4a4a4a !important;
+}
+
+.has-background-grey-dark {
+  background-color: #4a4a4a !important;
+}
+
+.has-text-grey {
+  color: #7a7a7a !important;
+}
+
+.has-background-grey {
+  background-color: #7a7a7a !important;
+}
+
+.has-text-grey-light {
+  color: #b5b5b5 !important;
+}
+
+.has-background-grey-light {
+  background-color: #b5b5b5 !important;
+}
+
+.has-text-grey-lighter {
+  color: #dbdbdb !important;
+}
+
+.has-background-grey-lighter {
+  background-color: #dbdbdb !important;
+}
+
+.has-text-white-ter {
+  color: whitesmoke !important;
+}
+
+.has-background-white-ter {
+  background-color: whitesmoke !important;
+}
+
+.has-text-white-bis {
+  color: #fafafa !important;
+}
+
+.has-background-white-bis {
+  background-color: #fafafa !important;
+}
+
+.has-text-weight-light {
+  font-weight: 300 !important;
+}
+
+.has-text-weight-normal {
+  font-weight: 400 !important;
+}
+
+.has-text-weight-medium {
+  font-weight: 500 !important;
+}
+
+.has-text-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.has-text-weight-bold {
+  font-weight: 700 !important;
+}
+
+.is-family-primary {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
+.is-family-secondary {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
+.is-family-sans-serif {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
+.is-family-monospace {
+  font-family: monospace !important;
+}
+
+.is-family-code {
+  font-family: monospace !important;
 }
 
 header {
