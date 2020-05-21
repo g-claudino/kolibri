@@ -1,16 +1,17 @@
 site-layout
   @title -- Sobre nós
-  @hero
+  @content
     hero
       @classes is-medium is-primary is-bold
       @title -- Sobre nós
       @subtitle -- Conheça mais sobre a Kolibri e quem torna esse projeto possível!
-  @content
-    section
-      h2 -- Origem
-      level
-        @content
-          div class="level-left left-has-max-width"
+    hero 
+      @subtitle -- O que está por trás da Kolibri?
+      @classes is-small is-light
+      @contentBelow
+        h2 -- Origem
+        div class = "columns"
+          div class = "column"
             p
               ---
               Somos um grupo de cinco estudantes da USP de São Carlos-SP (quatro engenheiros aeronáuticos e um cientista da computação) 
@@ -21,29 +22,82 @@ site-layout
               devem decolar o tempo todo no Brasil para permitir nosso progresso. 
               ---
             p
-          div class="level-right"
-            <img src="../../components/site-layout/kolibri-foto.jpg" alt="Kolibri Voando" width="600px"/>
+          div class="column"
+            <img src="../../components/site-layout/kolibri-foto.jpg" alt="Kolibri Voando" width="500px"/>
+            p -- <br/>
+    hero
+      @subtitle -- O time por trás da ferramenta
+      @classes is-small is-dark
+      @contentBelow
+        div class="columns"
+          div class ="column"
+            div class="columns is-mobile"
+              div class ="column"
+                span class="image is-128x128"
+                  img class="is-rounded" src="https://avatars2.githubusercontent.com/u/16293687?s=460&u=4c4ce9ff2752abd83c229eb640fb6b6a19ce89db&v=4"
+                  <br/>
+                h5  class="has-text-light" style="text-align:center;" -- Marcos de Luca, 23 anos <br/> Falsa
+                p style="text-align:center;"
+                  --
+                  Aluno do último ano de Engenharia Aeronáutica da USP. Criado em Piracicaba, Marcos sempre se interessou por ciência e desenvolvimento. Para o futuro, pensa em trabalhar com tecnologias inclusivas.
+                  <br/>
+                  Para mais informações: <br/>
+                  <a href="www.linkedin.com/in/marcos-silva-de-luca"> LinkedIn </a> <br/>
+                  <a href="mailto:marcos.sluca@gmail.com"> marcos.falso@kolibri.tech </a>
+          div class ="column"
+            div class="columns is-mobile"
+              div class ="column"
 
-    section
-      h2 -- Styles
-      p
-        ---
-        As you can see, this site looks quite nice.  That's because Marko
-        <a href="http://markojs.com/docs/components/#supporting-files">
-          pulls in stylesheets
-        </a>
-        next to a Marko template.  Try editing the contents of
-        <code>~/src/components/site-layout/style.css</code>. &#128132;
-        ---
-    section
-      h2 -- Images
-      p
-        ---
-        We also have the Marko logo in the header.  The image file lives at
-        <code>site-layout/logo.png</code>, right next to
-        <code>site-layout/index.marko</code>
-        which references it using a relative path:
-        <code>&lt;img src="./logo.png"/></code>.
-        ---
-      p
-        -- And this works for all resources, not just images, which allows you to keep your resources next to the templates which use them. &#128077;
+                span class="image is-128x128"
+                  img class="is-rounded" src="../../../img/bolsotrump.jpg"
+                  <br/>
+                h5  class="has-text-light" style="text-align:center;" -- Luis Medina, 25 anos <br/> Surfista
+                p style="text-align:center;"
+                  --
+                  Atualmente é estudante do curso de Engenharia Aeronáutica da USP. Nasceu no interior de São Paulo, na cidade de São José do Rio Preto. Ingressou na universidade em 2015, apaixonado por tecnologia e exatas. Também desenvolve pesquisa na área de estruturas aeronáuticas.
+                  <br/>
+                  Para mais informações: <br/>
+                  <a href="https://www.linkedin.com/in/lfgmolina/"> LinkedIn </a> <br/>
+                  <a href="mailto:luis.felipe.gomes.molina@gmail.com"> luis.medina@kolibri.tech </a>
+          div class ="column"
+            div class="columns is-mobile"
+              div class ="column"
+                span class="image is-128x128"
+                  img class="is-rounded" src="../../../img/stallman.jpg"
+                  <br/>
+                h5  class="has-text-light" style="text-align:center;" -- Guilherme Claudino, 22 anos <br/> Nerd
+                p style="text-align:center;"
+                  --
+                  Estudante de Engenharia Aeronáutica da USP e da École Centrale de Lille, França. Guilherme, nascido em Guarulhos, sempre foi apaixonado pelas ciências e pela inovação, fazendo-o buscar inúmeras oportunidades ao redor do mundo. Atua também como voluntário em instituições sociais.  
+                  <br/>
+                  Para mais informações: <br/>
+                  <a href="https://www.linkedin.com/in/g-c-silva/"> LinkedIn </a> <br/>
+                  <a href="mailto:guilhermeclaudino1997@gmail.com"> guilherme@kolibri.tech </a>
+          div class ="column"
+            div class="columns is-mobile"
+              div class ="column"
+                span class="image is-128x128"
+                  img class="is-rounded" src="../../../img/alexander-rybak.jpg"
+                  <br/>
+                h5  class="has-text-light" style="text-align:center;" -- Allan Domingues, 23 anos <br/> Deus
+                p style="text-align:center;"
+                  --
+                  Violinista
+                  <br/>
+                  Para mais informações: <br/>
+                  <a href="https://www.linkedin.com/in/asdomingues/"> LinkedIn </a> <br/>
+                  <a href="mailto:guilhermeclaudino1997@gmail.com"> deus@kolibri.tech </a>
+          div class ="column"
+            div class="columns is-mobile"
+              div class ="column"
+                span class="image is-128x128"
+                  img class="is-rounded" src="../../../img/linus-torvalds.jpg"
+                  <br/>
+                h5  class="has-text-light" style="text-align:center;" -- Grabriel Marcondes, 23 centímetros <br/> Potente
+                p style="text-align:center;"
+                  --
+                  Criador do Linux, git e outras paradas
+                  <br/>
+                  Para mais informações: <br/>
+                  <a href="https://www.linkedin.com/in/gmldasilva/"> LinkedIn </a> <br/>
+                  <a href="mailto:guilhermeclaudino1997@gmail.com"> gigante@kolibri.tech </a>

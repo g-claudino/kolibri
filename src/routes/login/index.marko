@@ -1,0 +1,43 @@
+site-layout
+  @title -- Login
+  @content
+    hero
+      @classes is-medium is-primary is-bold has-text-centered
+      @subtitle -- Acesse sua plataforma para encontrar as melhores opções para sua necessidade. 
+    hero
+      @title -- Formulário de Login
+      @classes is-small is-light
+      @contentBelow
+        div class ="column"
+          div class="field"
+            span 
+              --
+              E-mail
+              --
+            div class="control"
+              <input class="input" type="text" placeholder="guilherme@kolibri.tech">
+          div class="field"
+            span
+              --
+              CNPJ
+              --
+            div class="control"
+              <input class="input" type="text" placeholder="00.000.000/0001-00">
+          div class="field"
+            span
+              --
+              Senha
+              --
+            div class="control"
+              <input class="input" type="password">
+          div class="field"
+            div class="control"
+              <input class="checkbox" type="checkbox">    
+              span -- Quero continuar conectado
+          div class="field"
+            div class="control"
+              <input class="checkbox" type="checkbox">    
+              span -- Eu não sou robô do Bolsonaro
+          div class="control"
+            button class="is-primary" 
+              span -- Logar
