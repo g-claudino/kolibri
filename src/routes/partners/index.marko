@@ -4,90 +4,93 @@ site-layout
     hero
       @classes is-medium is-primary is-bold
       @title -- Parceiros
-      @subtitle -- Saiba quem está com a gente, fazendo a Kolibri acontecer! 
+      @subtitle -- Saiba quem está com a gente, fazendo a Kolibri acontecer!
     hero
-      @subtitle -- Quem são os atuais parceiros?
+      @subtitle -- CPS
+      @classes is-small is-light is-bold
+      @contentBelow
+        div class = "columns"
+          div class="column"
+            <a href="https://www.cps.sp.gov.br">
+            <img src="../../components/site-layout/partners/cps.png" alt="Kolibri Voando" width="300px"/></a>
+            p --- <br/>
+          div class="column"
+            p
+              ---
+              O Centro Paula Souza é uma autarquia do estado de São Paulo e um dos organizadores do HackaTrouble, um hackathon com o objetivo de ajudar a mitigar as consequência causadas pelo Covid-19. Nessa competição surgiu a Kolibri, nossa plataforma para reinventar o transporte de cargas pelo país. Desde então, o CPS vem apoiando o desenvolvimento dessa ideia.
+              ---
+    hero
+      @subtitle -- AWS
       @classes is-small is-light
       @contentBelow
-        div
-          div
-            h2 -- CPS
-            div class = "columns"
-              div class="column"
-                <a href="https://www.cps.sp.gov.br">
-                <img src="../../components/site-layout/partners/cps.png" alt="Kolibri Voando" width="300px"/></a>
-                p --- <br/> 
-              div class="column"
-                p
-                  ---
-                  O Centro Paula Souza é uma autarquia do estado de São Paulo e um dos organizadores do HackaTrouble, um hackathon com o objetivo de ajudar a mitigar as consequência causadas pelo Covid-19. Nessa competição surgiu a Kolibri, nossa plataforma para reinventar o transporte de cargas pelo país. Desde então, o CPS vem apoiando o desenvolvimento dessa ideia.
-                  ---
-                p 
-          div
-            h2 -- AWS
-            div class = "columns"
-              div class="column"
-                p
-                  ---
-                  A Amazon Web Services (AWS) é uma plataforma de nuvem da Amazon que oferece serviço de datacenters pelo mundo. Ela é responsável pela parceira em nos fornecer todo o apoio tecnológico para o desenvolvimento da Kolibri.
-                  ---
-              div class="column"
-                <a href="https://www.aws.amazon.com"> <img src="../../components/site-layout/partners/aws.png" alt="AWS" width="300px"/></a>
-                p --- <br/> 
-          div
-            h2 -- SEBRAE
-            div class = "columns"
-              div class="column"
-                <a href="https://www.sebrae.com.br"><img src="../../components/site-layout/partners/sebrae.jpg" alt="SEBRAE" width="300px"/></a>
-                p --- <br/> 
-              div class="column"
-                p
-                  ---
-                  Sebrae é uma entidade privada cujo significado é: Serviço Brasileiro de Apoio às Micro e Pequenas Empresas. Seu objetivo é estimular o empreendedorismo de pequenas e médias empresas pelo Brasil. Através de mentorias, estamos desenvolvendo nosso modelo de negócio cada vez mais com a ajuda fornecida.
-                  ---
-          div
-            h2 -- DESENVOLVE SP
-            div class = "columns"
-              div class="column"
-                p
-                  ---
-                  O Desenvolve SP é uma instituição financeira do governo do estado de São Paulo com o objeto de estimular o crescimento e financiamento de pequenas e médias empresas. Trata-se de um parceiro com conhecimento muito importante para o nosso modelo de negócio.
-                  ---
-              div class="column"
-                <a href="https://www.desenvolvesp.com.br">
-                <img src="../../components/site-layout/partners/desenvolve.jpg" alt="Desenvolve SP" width="300px"/></a>
-                p --- <br/> 
-          div
-            h2 -- SAE Brasil
-            div class = "columns"
-              div class="column"
-                <a href="https://www.portal.saebrasil.org.br">
-                <img src="../../components/site-layout/partners/sae.jpg" alt="SAE Brasil" width="300px"/></a>
-                p --- <br/> 
-              div class="column"
-                p
-                  ---
-                  Essa associação de profissionais da mobilidade tem como objetivo a disseminação da tecnologia e progresso da mobilidade pelo Brasil. Também foi uma das organizadoras do evento e vem apoiando o desenvolvimento da plataforma.
-                  ---
-          div
-            h2 -- Mural
-            div class = "columns"
-              div class="column"
-                p
-                  ---
-                  A plataforma Mural, além de apoiadora da competição, nos ajuda com ferramentas de gerenciamento de projetos digitais para o desenvolvimento de nossas soluções.
-                  ---
-              div class="column"
-                <a href="https://www.mural.co">
-                <img src="../../components/site-layout/partners/mural.jpg" alt="Mural" width="300px"/></a>
-                p --- <br/> 
+        div class = "columns"
+          div class="column"
+            p
+              ---
+              A Amazon Web Services (AWS) é uma plataforma de nuvem da Amazon que oferece serviço de datacenters pelo mundo. Ela é responsável pela parceira em nos fornecer todo o apoio tecnológico para o desenvolvimento da Kolibri.
+              ---
+          div class="column"
+            <a href="https://www.aws.amazon.com"> <img src="../../components/site-layout/partners/aws.png" alt="AWS" width="300px"/></a>
+    hero
+      @subtitle -- SEBRAE
+      @classes is-small is-light is-bold
+      @contentBelow
+        div class = "columns"
+          div class="column"
+            <a href="https://www.sebrae.com.br"><img src="../../components/site-layout/partners/sebrae.jpg" alt="SEBRAE" width="300px"/></a>
+            p --- <br/>
+          div class="column"
+            p
+              ---
+              Sebrae é uma entidade privada cujo significado é: Serviço Brasileiro de Apoio às Micro e Pequenas Empresas. Seu objetivo é estimular o empreendedorismo de pequenas e médias empresas pelo Brasil. Através de mentorias, estamos desenvolvendo nosso modelo de negócio cada vez mais com a ajuda fornecida.
+              ---
+    hero
+      @subtitle -- DESENVOLVE SP
+      @classes is-small is-light
+      @contentBelow
+        div class = "columns"
+          div class="column"
+            p
+              ---
+              O Desenvolve SP é uma instituição financeira do governo do estado de São Paulo com o objeto de estimular o crescimento e financiamento de pequenas e médias empresas. Trata-se de um parceiro com conhecimento muito importante para o nosso modelo de negócio.
+              ---
+          div class="column"
+            <a href="https://www.desenvolvesp.com.br">
+            <img src="../../components/site-layout/partners/desenvolve.jpg" alt="Desenvolve SP" width="300px"/></a>
+    hero
+      @subtitle -- SAE Brasil
+      @classes is-small is-light is-bold
+      @contentBelow
+        div class = "columns"
+          div class="column"
+            <a href="https://www.portal.saebrasil.org.br">
+            <img src="../../components/site-layout/partners/sae.jpg" alt="SAE Brasil" width="300px"/></a>
+            p --- <br/>
+          div class="column"
+            p
+              ---
+              Essa associação de profissionais da mobilidade tem como objetivo a disseminação da tecnologia e progresso da mobilidade pelo Brasil. Também foi uma das organizadoras do evento e vem apoiando o desenvolvimento da plataforma.
+              ---
+    hero
+      @subtitle -- Mural
+      @classes is-small is-light
+      @contentBelow
+        div class = "columns"
+          div class="column"
+            p
+              ---
+              A plataforma Mural, além de apoiadora da competição, nos ajuda com ferramentas de gerenciamento de projetos digitais para o desenvolvimento de nossas soluções.
+              ---
+          div class="column"
+            <a href="https://www.mural.co">
+            <img src="../../components/site-layout/partners/mural.jpg" alt="Mural" width="300px"/></a>
     hero
       @subtitle -- Torne-se você também um parceiro!
       @classes is-small is-dark is-bold
       @contentBelow
         div class ="column"
           div class="field"
-            span 
+            span
               --
               E-mail de contato
               --
@@ -115,5 +118,5 @@ site-layout
             div class="control"
               <input class="input" type="text" placeholder="">
           div class="control"
-            button class="is-primary" 
+            button class="is-primary"
               span -- Enviar
