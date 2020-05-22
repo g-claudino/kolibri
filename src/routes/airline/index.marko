@@ -1,6 +1,8 @@
 site-layout
   @title -- Painel de Controle
   @content
+    <link rel="stylesheet" href="../../../leaflet/leaflet.css" />
+    <script src="../../../leaflet/leaflet.js"></script>
     <script>
       function change_tab(tab_clicada, total_tabs){
         for (i = 1; i <= total_tabs; i++){
@@ -44,6 +46,9 @@ site-layout
             div class="column is-one-third"
               card
                 @header -- GRU x BSB
+                @image
+                  div id="mapid" style="height:300px;"
+                    
                 @content
                   p -- Dia: Segunda
                   p -- Horário: 17:10
@@ -203,3 +208,15 @@ site-layout
                   div class="buttons"
                     button class="is-primary" -- Gerar Recibo
                     button class="is-light" -- Estornar
+        <script> var mymap = L.map('mapid').setView([-18.5, -47], 15); 
+                  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1Ijoia29saWJyaS10ZWNoIiwiYSI6ImNrYWluZXVzeTAzMDcycW1zYndwN2M4ZGcifQ.5oV_gxlIpzB2nk9nBaSFZg}', {
+                      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                      maxZoom: 18,
+                      id: 'mapbox/streets-v11',
+                      tileSize: 512,
+                      zoomOffset: -1,
+                      accessToken: 'pk.eyJ1Ijoia29saWJyaS10ZWNoIiwiYSI6ImNrYWluZXVzeTAzMDcycW1zYndwN2M4ZGcifQ.5oV_gxlIpzB2nk9nBaSFZg'
+                  }).addTo(mymap);
+                  L.marker([-23.25, -46.28]).addTo(mymap)
+                  L.marker([-15.5, -47.55]).addTo(mymap)
+        </script>
