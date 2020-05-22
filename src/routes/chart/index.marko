@@ -1,0 +1,38 @@
+site-layout
+  @title -- Carrinho
+  @content
+    hero
+      @classes is-medium is-primary is-bold has-text-centered
+      @subtitle -- Olá, @Hospital. Aqui os produtos no seu carrinho! 
+    hero
+      @classes is-small is-light
+      @contentBelow
+        div class="column"
+          <!--> IF USER TYPE =! Hospital redirect to error 404 <-->
+          card
+            @header -- 2x Respiradores
+            @content 
+              p -- Empresa: EPIs Sulistas
+              p -- Cidade: Curitiba
+              p -- Preço: R$ 15.000,00/un
+              p -- Frete: R$ 1.000,00
+              p -- Rotas: CWB - BSB - Azul - Quarta
+              p -- Total: R$ 30.000,00
+              a -- Remover item <br/>
+              a -- Editar quantidade
+          card
+            @header -- 50x Máscaras
+            @content 
+              p -- Empresa: EPIs Sulistas
+              p -- Cidade: Curitiba
+              p -- Preço: R$ 5,00/un
+              p -- Frete: R$ 100,00
+              p -- Rotas: CWB - BSB - Azul - Quarta
+              p -- Total: R$ 350,00
+              a -- Remover item <br/>
+              a -- Editar quantidade
+          div class="buttons"
+            button class="is-primary" 
+              span -- Finalizar
+            button class="is-light" 
+              span -- Voltar
