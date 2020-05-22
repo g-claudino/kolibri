@@ -12,9 +12,14 @@ nav class="navbar" role="navigation" aria-label="main navigation"
       span aria-hidden="true"
       span aria-hidden="true"
       span aria-hidden="true"
-  div id="navbarBasicExample" class="navbar-menu is-active"
+  div id="navbarBasicExample" class="navbar-menu"
     div class="navbar-start"
-      a class="navbar-item" href="/legal" -- Aviso Legal
+      a class="navbar-item" href="/airline" -- Linha aérea
+      a class="navbar-item" href="/producer" -- Fornecedores
+      a class="navbar-item" href="/hospital" -- Secretaria de saúde
+      span class="navbar-item" style="text-align: center; color: #7c238c;" -- |
+      a class="navbar-item" href="/search" -- Busca
+      a class="navbar-item" href="/partners" -- Agradecimentos
       div class="navbar-item has-dropdown is-hoverable"
         a class="navbar-link" href= "/about" -- Sobre nós
         div class="navbar-dropdown"
@@ -24,6 +29,8 @@ nav class="navbar" role="navigation" aria-label="main navigation"
           a class="navbar-item" href="/jobs" -- Trabalhe conosco
           hr class="navbar-divider"
           a class="navbar-item" href="/partners" -- Seja um parceiro
+      span class="navbar-item" style="text-align: center; color: #7c238c;" -- |
+      a class="navbar-item" href="/legal" -- Aviso Legal
     div class="navbar-end"
       div class="navbar-item"
         div class="buttons"
@@ -31,3 +38,29 @@ nav class="navbar" role="navigation" aria-label="main navigation"
             a href="/register" -- <strong>Cadastre-se</strong>
           button class="is-light"
             a href="/login" -- Conecte-se
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>

@@ -1,7 +1,7 @@
 site-layout
   @title -- Painel de Controle
   @content
-    <script> 
+    <script>
       function change_tab(tab_clicada, total_tabs){
         for (i = 1; i <= total_tabs; i++){
           if (i == tab_clicada){
@@ -20,17 +20,17 @@ site-layout
     </script>
     hero
       @classes is-medium is-primary is-bold has-text-centered
-      @subtitle -- Olá, @Secretária. Aqui você gerencia seus pedidos! 
+      @subtitle -- Olá, @Secretaria. Aqui você gerencia seus pedidos!
     hero
       @classes is-small is-light
       @contentBelow
         div class="column"
-          div 
+          div
             div class="field"
               div class="control"
                 <input class="input" type="text" placeholder="Pesquise produtos">
             div class="control"
-                      button class="is-light" 
+                      button class="is-light"
                         span -- Buscar
           tabs
             @classes is-centered is-boxed is-toggle
@@ -44,51 +44,51 @@ site-layout
                   li id="tab3" onclick="test()" onclick="change_tab(3,4)"
                     a -- Pedidos Confirmados
                   li id="tab4" onclick="test()" onclick="change_tab(4,4)"
-                    a -- Gerenciar Pagamentos 
+                    a -- Gerenciar Pagamentos
                 <!--> IF USER TYPE =! Hospital redirect to error 404 <-->
           div id="tab1-content" style="display:block;" class="column"
             p
               --
-              Aqui você vê suas rotas para os próximos sete dias. 
+              Aqui você vê suas rotas para os próximos sete dias.
 
             div class = "columns"
               div class = "column"
                 card
                   @header -- 2x Respiradores
-                  @content 
+                  @content
                     p -- Respirador modelo x
                     p -- Preço Máximo: R$ 15.000,00/un
                     div class="control"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Editar alerta
               div class = "column"
                 card
                   @header -- 5000x Máscaras
-                  @content 
+                  @content
                     p -- Máscara Cirúrgica modelo Y
                     p -- Preço Máximo: R$ 15,00/un
                     div class="control"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Editar alerta
               div class = "column"
                 card
                   @header -- 20x Aventais
-                  @content 
+                  @content
                     p -- Avental modelo z
                     p -- Preço Máximo: R$ 50,00/un
                     div class="control"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Editar alerta
             div class="control"
-              button class="is-primary" 
+              button class="is-primary"
                 span -- Adicionar novo alerta
           div id="tab2-content" style="display:none;"
             p
-              -- Aqui você gerencia os pedidos pendentes de transporte. 
+              -- Aqui você gerencia os pedidos pendentes de transporte.
             div class = "column"
               card
                 @header -- 15x Luvas e 15x Toucas
-                @content 
+                @content
                   p -- Produtor: EPIs do Brasil
                   p -- Número de Vôos: 2
                   p -- Rota mais utilizada: GRU - BSB - Azul
@@ -108,19 +108,19 @@ site-layout
                   p -- Total: R$ 345,00
                   p -- Carga Usada: 30 kg
                   div class="buttons"
-                    button class="is-primary" 
+                    button class="is-primary"
                       span -- Editar
-                    button class="is-light" 
-                      span -- Cancelar      
+                    button class="is-light"
+                      span -- Cancelar
 
           div id="tab3-content" style="display:none;"
             p
-              -- Aqui você pode ver quais rotas você deve tem confirmadas. 
+              -- Aqui você pode ver quais rotas você deve tem confirmadas.
             div class = "columns"
               div class = "column"
                 card
                   @header -- 50x Aventais
-                  @content 
+                  @content
                     p -- Produtor: EPIs do Brasil
                     p -- Preço Unitário: R$1,00
                     p -- Operador: Azul
@@ -131,14 +131,14 @@ site-layout
                     p -- Taxa da Kolibri: R$ 00,00
                     p -- Total: 150,00
                     div class="buttons"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Adiconar lembrete
-                      button class="is-light" 
+                      button class="is-light"
                         span -- Cancelar
               div class = "column"
                 card
                   @header -- 2x Respiradores
-                  @content 
+                  @content
                     p -- Produtor: EPIs do Brasil
                     p -- Preço Unitário: R$10.000,00
                     p -- Operador: Azul
@@ -149,14 +149,14 @@ site-layout
                     p -- Taxa da Kolibri: R$ 00,00
                     p -- Total: 21.000,00
                     div class="buttons"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Adiconar lembrete
-                      button class="is-light" 
+                      button class="is-light"
                         span -- Cancelar
               div class = "column"
                 card
                   @header -- 500x Máscaras
-                  @content 
+                  @content
                     p -- Produtor: EPIs do Brasil
                     p -- Preço Unitário: R$2,00
                     p -- Operador: Azul
@@ -167,9 +167,9 @@ site-layout
                     p -- Taxa da Kolibri: R$ 00,00
                     p -- Total: 1.500,00
                     div class="buttons"
-                      button class="is-primary" 
+                      button class="is-primary"
                         span -- Adiconar lembrete
-                      button class="is-light" 
+                      button class="is-light"
                         span -- Cancelar
           div id="tab4-content" style="display:none;"
             p
@@ -177,21 +177,21 @@ site-layout
             div class = "column"
               card
                 @header -- EPIs do Brasil
-                @content 
+                @content
                   p -- Número de Vôos: 3
                   p -- Rota mais utilizada: GRU - BSB - Azul
                   p -- CNPJ Produtor: 000.000.000/0001-00
                   p -- CNPJ Companhia: 000.000.000/0001-00
                   p -- Rota: GRU - BSB
                   p -- Data de pagamento: Quarta
-                  p -- Referente à: Vôo de quarta, de sexta e de sábado. 
+                  p -- Referente à: Vôo de quarta, de sexta e de sábado.
                   p -- Carga Usada: 160 kg
                   p -- Valor dos produtos: R$21.050,00
                   p -- Valor do frete: R$1.600,00
                   p -- Taxa da Kolibri: R$ 00,00
                   p -- Total pago: R$22.650,00
                   div class="buttons"
-                    button class="is-primary" 
+                    button class="is-primary"
                       span -- Gerar Recibo
-                    button class="is-light" 
+                    button class="is-light"
                       span -- Cancelar
