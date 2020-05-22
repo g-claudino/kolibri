@@ -1,0 +1,92 @@
+site-layout
+  @title -- Busca
+  @content
+    hero
+      @classes is-medium is-primary is-bold has-text-centered
+      @subtitle -- Olá, @Usuário. Aqui os resultados da sua busca! 
+    hero
+      @classes is-small is-light
+      @contentBelow
+        div class="column"
+          div 
+            div class="field"
+              div class="control"
+                <input class="input" type="text" placeholder="Item procurado">
+            div class="control"
+                      button class="is-light" 
+                        span -- Pesquise novamente
+          <!--> IF USER TYPE =! Produtor ou hospital redirect to error 404 <-->
+          div class="column"
+            p
+              --
+              Aqui você vê os resultados da sua pesquisa. 
+
+            div class = "columns"
+              div class = "column"
+                card
+                  @header -- 2x Respiradores
+                  @content 
+                    p -- Empresa: EPIs Sulistas
+                    p -- Cidade: Curitiba
+                    p -- Preço: R$ 15.000,00/un
+                    p -- Rotas encontradas: 3
+                    p -- Preço do frente médio: R$ 900,00
+                    div class="field"
+                      div class = "control"
+                        div class = "select is-primary"
+                          <select>
+                            <option> 1 </option>
+                            <option> 2 </option>
+                          </select>
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Ver Rotas
+              div class = "column"
+                card
+                  @header -- 5x Respiradores
+                  @content 
+                    p -- Empresa: EPIs do Brasil
+                    p -- Cidade: Guarulhos
+                    p -- Preço: R$ 14.000,00/un
+                    p -- Rotas encontradas: 6
+                    p -- Preço do frente médio: R$ 1100,00
+                    div class="field"
+                      div class = "control"
+                        div class = "select is-primary"
+                          <select>
+                            <option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                          </select>
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Ver Rotas
+              div class = "column"
+                card
+                  @header -- 4x Respiradores
+                  @content 
+                    p -- Empresa: Nordeste EPIs
+                    p -- Cidade: Salvador
+                    p -- Preço: R$ 13.000,00/un
+                    p -- Rotas encontradas: 2
+                    p -- Preço do frente médio: R$ 1500,00
+                    div class="field"
+                      div class = "control"
+                        div class = "select is-primary"
+                          <select>
+                            <option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                          </select>
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Ver Rotas
+                        <!--> Adicionar uma rotina para ao clicar em ver rotas aparecer um card com mapa
+                        Esse card tem a duração, chegada prevista e o preço das opões.
+                        Também fazer uma versão para Produtores verem quem quer comprar e fazer uma proposta do preço por unidade.   <-->
+            div class="control"
+              button class="is-primary" 
+                span -- Voltar

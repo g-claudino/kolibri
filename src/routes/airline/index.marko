@@ -1,0 +1,232 @@
+site-layout
+  @title -- Painel de Controle
+  @content
+    <script> 
+      function change_tab(tab_clicada, total_tabs){
+        for (i = 1; i <= total_tabs; i++){
+          if (i == tab_clicada){
+            document.getElementById('tab' + i.toString()).className = "is-active";
+            console.log(document.getElementById('tab' + i.toString()).classList)
+            document.getElementById('tab' + i.toString() + '-content').style.display = "block";
+          }
+          else{
+            document.getElementById('tab' + i.toString()).className = "";
+            console.log(document.getElementById('tab' + i.toString()).classList)
+            document.getElementById('tab' + i.toString() + '-content').style.display = "none";
+          }
+        };
+      };
+      window.onload = change_tab
+    </script>
+    hero
+      @classes is-medium is-primary is-bold has-text-centered
+      @subtitle -- Olá, @Linha-Aérea. Aqui você gerencia suas rotas e pedidos! 
+    hero
+      @classes is-small is-light
+      @contentBelow
+        div class="column"
+          tabs
+            @classes is-centered is-boxed is-toggle
+            @content
+              div
+                ul
+                  li id="tab1" class="is-active" onclick="change_tab(1,4)"
+                    a -- Gerenciar Rotas
+                  li id="tab2" onclick="test()" onclick="change_tab(2,4)"
+                    a -- Pedidos em Espera
+                  li id="tab3" onclick="test()" onclick="change_tab(3,4)"
+                    a -- Gerenciar Cargas Aprovadas
+                  li id="tab4" onclick="test()" onclick="change_tab(4,4)"
+                    a -- Gerenciar Pagamentos 
+                <!--> IF USER TYPE =! Linha Aérea redirect to error 404 <-->
+          div id="tab1-content" style="display:block;" class="column"
+            p
+              --
+              Aqui você vê suas rotas para os próximos sete dias. 
+
+            div class = "columns"
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Segunda 
+                    p -- Horário: 17:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Terça 
+                    p -- Horário: 17:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Quarta 
+                    p -- Horário: 17:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+            div class = "columns"
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Quinta 
+                    p -- Horário: 17:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Sexta 
+                    p -- Horário: 17:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Sábado 
+                    p -- Horário: 18:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+            div class = "columns"
+              div class = "column"
+                card
+                  @header -- GRU x BSB
+                  @content 
+                    p -- Dia: Domingo 
+                    p -- Horário: 18:10
+                    p -- Duração: 02:10
+                    p -- Carga Disponível: 500 kg
+                    div class="control"
+                      button class="is-primary" 
+                        span -- Editar rota
+              div class = "column"
+                card
+                  
+              div class = "column"
+                card
+
+            div class="control"
+              button class="is-primary" 
+                span -- Adicionar nova rota
+          div id="tab2-content" style="display:none;"
+            p
+              -- Aqui você gerencia os pedidos pendentes de transporte. 
+            div class = "column"
+              card
+                @header -- Secretária de Saúde de Brasília
+                @content 
+                  p -- Número de Vôos: 2
+                  p -- Rota mais utilizada: GRU - BSB
+                  p -- Rota 1: GRU - BSB, Sábado
+                  p -- Carga 1: 15x Luvas, 20kg
+                  p -- Valor 1: R$200,00
+                  p -- Taxa 1: R$00,00
+                  p -- Rota 2: GRU - BSB, Domingo
+                  p -- Carga 2: 15x Toucas, 10kg
+                  p -- Valor 2: R$100,00
+                  p -- Taxa 2: R$00,00
+                  p -- Data de pagamento: Domingo
+                  p -- Total: R$ 300
+                  p -- Carga Usada: 30 kg
+                  div class="buttons"
+                    button class="is-primary" 
+                      span -- Confirmar
+                    button class="is-light" 
+                      span -- Negar      
+
+          div id="tab3-content" style="display:none;"
+            p
+              -- Aqui você pode ver quais rotas você deve carregar o que. 
+            div class = "columns"
+              div class = "column"
+                card
+                  @header -- 50x Aventais
+                  @content 
+                    p -- Cliente: Secretária de Saúde de Brasília 
+                    p -- Rota: GRU - BSB
+                    p -- Dia: Quarta-feira
+                    p -- Carga Usada: 10 kg
+                    p -- Valor do frete: R$100,00
+                    p -- Taxa da Kolibri: R$ 00,00
+                    div class="buttons"
+                      button class="is-primary" 
+                        span -- Adiconar lembrete
+                      button class="is-light" 
+                        span -- Cancelar
+              div class = "column"
+                card
+                  @header -- 2x Respiradores
+                  @content 
+                    p -- Cliente: Secretária de Saúde de Brasília 
+                    p -- Rota: GRU - BSB
+                    p -- Dia: Sexta-feira
+                    p -- Carga Usada: 100 kg
+                    p -- Valor do frete: R$1000,00
+                    p -- Taxa da Kolibri: R$ 00,00
+                    div class="buttons"
+                      button class="is-primary" 
+                        span -- Adiconar lembrete
+                      button class="is-light" 
+                        span -- Cancelar
+              div class = "column"
+                card
+                  @header -- 500x Máscaras
+                  @content 
+                    p -- Cliente: Secretária de Saúde de Brasília 
+                    p -- Rota: GRU - BSB
+                    p -- Dia: Sábado
+                    p -- Carga Usada: 50 kg
+                    p -- Valor do frete: R$500,00
+                    p -- Taxa da Kolibri: R$ 00,00
+                    div class="buttons"
+                      button class="is-primary" 
+                        span -- Adiconar lembrete
+                      button class="is-light" 
+                        span -- Cancelar
+          div id="tab4-content" style="display:none;"
+            p
+              -- Aqui você gerencia as transações envolvendo a plataforma.
+            div class = "column"
+              card
+                @header -- Secretária de Saúde de Brasília
+                @content 
+                  p -- Número de Vôos: 3
+                  p -- Rota mais utilizada: GRU - BSB
+                  p -- CNPJ Cliente: 000.000.000/0001-00
+                  p -- Rota: GRU - BSB
+                  p -- Data de pagamento: Sábado
+                  p -- Referente à: Vôo de quarta, de sexta e de sábado. 
+                  p -- Carga Usada: 160 kg
+                  p -- Valor do frete: R$1600,00
+                  p -- Taxa da Kolibri: R$ 00,00
+                  p -- Total à receber: R$1600,00
+                  div class="buttons"
+                    button class="is-primary" 
+                      span -- Gerar Recibo
+                    button class="is-light" 
+                      span -- Estornar
