@@ -3,6 +3,7 @@
   "description": "Demo of how to build an app using marko-starter",
   "version": "1.0.0",
   "dependencies": {
+    "json-server": "^0.16.1",
     "marko": "^4.13.10",
     "marko-starter": "^2.0.4"
   },
